@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <head>
+    <title>Formula 1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.scrollTo.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/personalstyle.css">
+</head>
+
+<body>
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-link" href="#top">F1</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-link" href="index.html">Vozači</a>
+                    </li>
+                    <li class="active">
+                        <a class="page-link" href="povijest.html">Timovi</a>
+                    </li>
+                    <li>
+                        <a class="page-link" href="blog.html">Novosti</a>
+                    </li>
+                    <li>
+                        <a class="page-link" href="rezultati.html">Rezultati</a>
+                    </li>
+                    <li>
+                        <a class="page-link" href="./login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid">
+        <h1 class="display-3">Formula 1</h1>
+        <p class="lead">Stranica o povijesti i novostima u svijetu F1.</p>
+    </div>
+
+    <script>
+
+
+     function changeTeam(team1){
+         switch(team1){
+             case 1:
+                document.getElementById("naziv_tima").innerHTML = "Ferrari";
+                document.getElementById("link_tima").href = "http://formula1.ferrari.com/en/";
+                document.getElementById("fotografija_tima").src = "/projekt/images/ferrari.png";
+                $( "#opis_tima" ).load( "/Projekt/ferrari.txt" );
+                $
+                break;
+            case 2:
+                document.getElementById("naziv_tima").innerHTML = "McLaren";
+                document.getElementById("link_tima").href = "http://www.mclaren.com/formula1/";
+                document.getElementById("fotografija_tima").src = "/projekt/images/mclaren.png";
+                $( "#opis_tima" ).load( "/Projekt/mclaren.txt" );
+                break;
+            case 3:
+                document.getElementById("naziv_tima").innerHTML = "Williams";
+                document.getElementById("link_tima").href = "http://www.mclaren.com/formula1/";
+                document.getElementById("fotografija_tima").src = "/projekt/images/williams.png";
+                $( "#opis_tima" ).load( "/Projekt/williams.txt" );
+                break;
+         }
+         $('html, body').animate({
+                scrollTop: $("#naziv_tima").offset().top
+            }, 2000);
+     }   
+    </script>
+
+    <section class="no-padding" id="portfolio" style="padding-bottom: 30pt">
+        <div class="container-fluid">
+            <div class="row no-gutter popup-gallery">
+                <div class="col-lg-4 col-sm-6">
+                        <img src="images/ferrari.png" class="img-responsive" alt="" onclick="changeTeam(1)" style="height: 200pt">
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                        <img src="images/mclaren.png" class="img-responsive" alt="" onclick="changeTeam(2)" style="height: 200pt">
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                        <img src="images/williams.png" class="img-responsive" alt="" onclick="changeTeam(3)" style="height: 200pt">
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <img src="images/mercedes.jpg" class="img-responsive" alt="" onclick="changeTeam(3)" style="height: 200pt">
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <img src="images/redbull.jpg" class="img-responsive" alt="" onclick="changeTeam(3)" style="height: 200pt">
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <img src="images/renault.png" class="img-responsive" alt="" onclick="changeTeam(3)" style="height: 200pt">
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <img src="images/tororosso.png" class="img-responsive" alt="" onclick="changeTeam(3)" style="height: 200pt">
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <img src="images/forceindia.png" class="img-responsive" alt="" onclick="changeTeam(3)" style="height: 200pt">
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <img src="images/haas.png" class="img-responsive" alt="" onclick="changeTeam(3)" style="height: 200pt">
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <img src="images/sauber.png" class="img-responsive" alt="" onclick="changeTeam(3)" style="height: 200pt">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-primary" id="halloffame" style="background-color: lightgray; color: black">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading" id="naziv_tima">Timovi u F1</h2>
+                    <hr class="light">
+                </div>
+            </div>
+            
+            <div class="row">
+                    <p class="col-sm-6" id="opis_tima"></p>
+                    <p class="col-sm-6" style="text-align: center">
+                        <a href="" id="link_tima"><img src="" class="img-rounded" height="400pt" id="fotografija_tima"></a>
+                    </p>
+                </div>
+        </div>
+    </section>
+</body>
+
+</html>

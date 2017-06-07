@@ -1,30 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <title>SneakerComfort</title>
+ <head>
+    <title>Formula 1</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/bootstrap.css" rel="stylesheet">
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
-    <style>
-        .jumbotron {
-            background-image: url("images/header.jpg");
-            background-size: cover;
-            background-position: center;
-            text-align: center;
-            padding-top: 100pt;
-            height: 300pt;
-            color: black;
-            font-family: Arial, Helvetica, sans-serif;
-            margin-bottom: 0;
-        }
-
-        .navbar {
-            margin-bottom: 0;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/personalstyle.css">
 </head>
 
 <body>
@@ -36,23 +20,26 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Running Comfort</a>
+                <a class="navbar-brand page-link" href="#top">F1</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="page-scroll" href="#povijest">Povijest</a>
+                    <li class="active">
+                        <a class="page-link" href="index.html">Vozači</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#blog">Članci</a>
+                        <a class="page-link" href="povijest.html">Timovi</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#new">Novo</a>
+                        <a class="page-link" href="blog.html">Novosti</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#login">Login</a>
+                        <a class="page-link" href="rezultati.html">Rezultati</a>
+                    </li>
+                    <li>
+                        <a class="page-link" href="./login.html">Login</a>
                     </li>
                 </ul>
             </div>
@@ -62,36 +49,37 @@
     </nav>
 
     <div class="jumbotron jumbotron-fluid">
-        <h1 class="display-3">Sneaker Comfort</h1>
-        <p class="lead">Stranica o povijesti i novostima u svijetu tenisica.</p>
+        <h1 class="display-3">Formula 1</h1>
+        <p class="lead">Stranica o povijesti i novostima u svijetu F1.</p>
     </div>
 
-    <section class="bg-primary" id="povijest">
+    <section class="bg-primary" id="halloffame">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Najpopularnije tenisice</h2>
+                    <h2 class="section-heading">Najbolji vozači svih vremena</h2>
                     <hr class="light">
                 </div>
             </div>
             <div class="row">
-                    <h3 class="col-sm-6" style="padding-bottom: 15pt">Converse Chuck Taylor All Star</h3>
+                    <h3 class="col-sm-6" style="padding-bottom: 15pt; font-size: 200%">Michael Schumacher</h3>
                 </div>
             <div class="row">
-                    <p class="col-sm-6">Converse Chuck Taylor All Star, kod nas popularno zvane "Starke" su prve tenisice napravljene za košarku. Napravio ih je Marquis Converse 1917. godine, te su i dan danas popularne. Tenisice se sastoje od gumenih potplata, te platnenog gornjišta. Košarkaš Charles Taylor nakon što je počeo igrati za tim kojega je sponzorirao Converse počeo je i prodavati njihove tenisice pod nazivom "All Star". Chuck je tijekom godina predlagao i promjene na tenisicama, a njegova najpoznatija ideja je okrugla zakrpa na gležnju. Starke su koristili američki vojnici u drugom svjetskom ratu za vrijeme treninga, a iznimno popularne su bile u košarci gdje su se koristile sve do 1980. godine. Zanimljiva činjenica je da su u 60tim godinama prošlog stoljeća preko 90% igrača NBA-a koristili All Star tenisice. I dan danas su iznimno popularne, međutim ne među sportašima već kao casual obuća. </p>
+                    <p class="col-sm-6">Michael Schumacher je definitivno najpopularniji (bivši) vozač Formule 1. Tu popularnost je stekao od 1991. do 2006. godine kada je osvojio čak 7 prvenstava, što je više od bilo kojeg drugog vozača. Rođen je 1969. godine u Njemačkoj, te se Formulom 1 bavio od 1991. godine, pa sve do 2012. godine kada je otišao u mirovinu. U međuvremenu je imao pauzu od 2006. do 2010. godine. Vozio je za Jordan, Benetton, Ferrari i na kraju Mercedes. U svojoj karijeri bilježi 68 najboljih kvalifikacijskih pozicija, te 91 pobjedu, a zadnja je na VN Kine 2006. godine. Prva dva svjetska prvenstva je osvojio s timom Benetton F1(današnji Renault), a ostalih 5 je osvojio u Ferrariju. Njegov brat Ralf je također bivši vozač F1, te su njih dvojica jedina braća koja su zajedno pobjeđivala u Formuli 1, međutim Ralf nije bio toliko uspješan kao Michael. U prosincu 2013. Michael Schumacher je nažalost stradao na skijanju, te je bio u umjetnoj komi 6 mjeseci, te se i dan danas oporavlja od udarca u glavu. </p>
                     <p class="col-sm-6" style="text-align: center">
-                        <img src="images/allstar.jpg" class="img-rounded" height="300px">
+                        <a href="https://en.wikipedia.org/wiki/Michael_Schumacher"><img src="images/schumacher.jpg" class="img-rounded" height="400pt"></a>
                     </p>
                 </div>
 
                 <div class="row">
-                    <h3 class="col-sm-6" style="padding-bottom: 15pt">Nike Air Jordan</h3>
+                    <h3 class="col-sm-6" style="padding-bottom: 15pt">Juan Manuel Fangio</h3>
                 </div>
             <div class="row">
                     <p class="col-sm-6" style="text-align: center">
-                        <img src="images/airjordan1.jpg" class="img-rounded" height="250px">
+                        <a href="https://en.wikipedia.org/wiki/Juan_Manuel_Fangio"><img src="images/fangio.png" class="img-rounded" height="400pt" ></a>
                     </p>
-                    <p class="col-sm-6">Nike Air Jordan 1 tenisice su izdane 1984. godine. Napravljene za košarkašku legendu Michaela Jordana, ove tenisice su doživjele nevjerojatnu popularnost među mlađom populacijom. Prvi model je bio u crveno-crnoj boji koju je NBA zabranila zbog "manjka bijele boje", te je Nike plaćao kaznu 5000$ po svakoj utakmici na kojoj je Michael Jordan nosio ove tenisice. Do danas su napravili 31 verziju Air Jordan tenisica, a poslijednja verzija (XXXI) je napravljena za američkog košarkaša Russella Westbrook-a. Međutim, Air Jordan 1 su još uvijek najpopularniji model. Ove tenisice zamalo nisu ni postojale, zato što je Michael Jordan trebao potpisati ugovor s Adidasom, međutim u zadnji tren se predomislio. Razna ograničena izdanja ovih tenisica danas košta i po nekoliko desetaka tisuća dolara<a href="https://www.flightclub.com/air-jordan-4-retro-blk-chrome-white-012355" style="color:darkred">(kao npr. Air Jordan 4 Retro "Carhartt x Eminem")</a>.</p>
+                    <p class="col-sm-6">
+                        Juan Manuel Fangio je argentinski vozač, te drugi najuspješniji vozač u F1. Osvojio je 5 svjetskih prvenstava u svojoj vozačkoj karijeri od 1950. do 1958. godine. Tijekom svoje karijere imao je 29 najboljih startnih pozicija, te 24 pobjede. Svoje prvo prvenstvo 1951. je osvojio s Alfa Romeom, drugo 1954. s Mercedesom, treće 1955. također s Mercedesom, četvrto 1956. s Ferrarijem i poslijednje 1957. s Maseratijem. Zadnja pobjeda na utrci mu je bila 1957. godine na Velikoj Nagradi Njemačke, a posljednja utrka koju je vozio je bila Velika Nagrada Francuske 1958. godine. Umro je 1995. godine u Buenos Airesu, u 85. godini života. I dan danas drži 5 rekorda u F1: Najveći postotak pobjeda(46%), najveći postotak najboljih startnih pozicija(55.8%), najveći postotak starta iz prvog reda(92.31%), najstarijeg svjetskog prvaka(46 godina), te svjetskog prvaka s najviše timova(4).</p>
                 </div>
         </div>
     </section>
