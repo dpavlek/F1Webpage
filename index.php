@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php session_start();?>
+
  <head>
     <title>Formula 1</title>
     <meta charset="UTF-8">
@@ -16,30 +18,35 @@
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
+            <div class="navbar-header" id="navigation-bar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-link" href="#top">F1</a>
+                <a class="navbar-brand page-link" href="#top" id="welcome_message">F1</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active">
-                        <a class="page-link" href="index.html">Vozači</a>
+                        <a class="page-link" href="index.php">Vozači</a>
                     </li>
                     <li>
-                        <a class="page-link" href="povijest.html">Timovi</a>
+                        <a class="page-link" href="povijest.php">Timovi</a>
                     </li>
                     <li>
-                        <a class="page-link" href="blog.html">Novosti</a>
+                        <a class="page-link" href="blog.php" id="blog" disabled=true>Novosti</a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Rezultati
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                        <li><a href="rezultati_vozaci.php">Vozači</a></li>
+                        <li><a href="rezultati_timovi.php">Timovi</a></li>
+                        </ul>
                     </li>
                     <li>
-                        <a class="page-link" href="rezultati.html">Rezultati</a>
-                    </li>
-                    <li>
-                        <a class="page-link" href="./login.html">Login</a>
+                        <a class="page-link" href="./login.php" id="login">Login</a>
                     </li>
                 </ul>
             </div>
@@ -84,5 +91,7 @@
         </div>
     </section>
 </body>
+
+<script src="js/cookie_check.js"></script>
 
 </html>

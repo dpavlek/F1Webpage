@@ -35,10 +35,15 @@
                     <li>
                         <a class="page-link" href="blog.html">Novosti</a>
                     </li>
-                    <li>
-                        <a class="page-link" href="rezultati.html">Rezultati</a>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Rezultati
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                        <li><a href="rezultati_vozaci.html">Vozači</a></li>
+                        <li class="active"><a href="rezultati_timovi.html">Timovi</a></li>
+                        </ul>
                     </li>
-                    <li class="active">
+                    <li>
                         <a class="page-link" href="./login.html">Login</a>
                     </li>
                 </ul>
