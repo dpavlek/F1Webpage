@@ -70,62 +70,62 @@
                 document.getElementById("naziv_tima").innerHTML = "Ferrari";
                 document.getElementById("link_tima").href = "http://formula1.ferrari.com/en/";
                 document.getElementById("fotografija_tima").src = "/projekt/images/ferrari.png";
-                $( "#opis_tima" ).load( "/Projekt/ferrari.txt" );
+                $( "#opis_tima" ).load( "/Projekt/text/ferrari.txt" );
                 $
                 break;
             case 2:
                 document.getElementById("naziv_tima").innerHTML = "McLaren";
                 document.getElementById("link_tima").href = "http://www.mclaren.com/formula1/";
                 document.getElementById("fotografija_tima").src = "/projekt/images/mclaren.png";
-                $( "#opis_tima" ).load( "/Projekt/mclaren.txt" );
+                $( "#opis_tima" ).load( "/Projekt/text/mclaren.txt" );
                 break;
             case 3:
                 document.getElementById("naziv_tima").innerHTML = "Williams";
                 document.getElementById("link_tima").href = "http://www.mclaren.com/formula1/";
                 document.getElementById("fotografija_tima").src = "/projekt/images/williams.png";
-                $( "#opis_tima" ).load( "/Projekt/williams.txt" );
+                $( "#opis_tima" ).load( "/Projekt/text/williams.txt" );
                 break;
             case 4:
                 document.getElementById("naziv_tima").innerHTML = "Mercedes";
                 document.getElementById("link_tima").href = "https://www.mercedesamgf1.com";
                 document.getElementById("fotografija_tima").src = "/projekt/images/mercedes.jpg";
-                $( "#opis_tima" ).load( "/Projekt/mercedes.txt" );
+                $( "#opis_tima" ).load( "/Projekt/text/mercedes.txt" );
                 break;
             case 5:
                 document.getElementById("naziv_tima").innerHTML = "Red Bull";
                 document.getElementById("link_tima").href = "http://www.redbullracing.com";
                 document.getElementById("fotografija_tima").src = "/projekt/images/redbull.jpg";
-                $( "#opis_tima" ).load( "/Projekt/redbull.txt" );
+                $( "#opis_tima" ).load( "/Projekt/text/redbull.txt" );
                 break;
             case 6:
                 document.getElementById("naziv_tima").innerHTML = "Renault";
                 document.getElementById("link_tima").href = "https://www.renaultsport.com/?lang=en";
                 document.getElementById("fotografija_tima").src = "/projekt/images/renault.png";
-                $( "#opis_tima" ).load( "/Projekt/renault.txt" );
+                $( "#opis_tima" ).load( "/Projekt/text/renault.txt" );
                 break;
             case 7:
                 document.getElementById("naziv_tima").innerHTML = "Toro Rosso";
                 document.getElementById("link_tima").href = "http://www.scuderiatororosso.com";
                 document.getElementById("fotografija_tima").src = "/projekt/images/tororosso.png";
-                $( "#opis_tima" ).load( "/Projekt/tororosso.txt" );
+                $( "#opis_tima" ).load( "/Projekt/text/tororosso.txt" );
                 break;
             case 8:
                 document.getElementById("naziv_tima").innerHTML = "Force India";
                 document.getElementById("link_tima").href = "https://www.forceindiaf1.com";
                 document.getElementById("fotografija_tima").src = "/projekt/images/forceindia.png";
-                $( "#opis_tima" ).load( "/Projekt/forceindia.txt" );
+                $( "#opis_tima" ).load( "/Projekt/text/forceindia.txt" );
                 break;
             case 9:
                 document.getElementById("naziv_tima").innerHTML = "Haas F1";
                 document.getElementById("link_tima").href = "https://www.haasf1team.com";
                 document.getElementById("fotografija_tima").src = "/projekt/images/haas.png";
-                $( "#opis_tima" ).load( "/Projekt/haas.txt" );
+                $( "#opis_tima" ).load( "/Projekt/text/haas.txt" );
                 break;
             case 10:
                 document.getElementById("naziv_tima").innerHTML = "Sauber F1";
                 document.getElementById("link_tima").href = "https://www.sauberf1team.com";
                 document.getElementById("fotografija_tima").src = "/projekt/images/sauber.png";
-                $( "#opis_tima" ).load( "/Projekt/sauber.txt" );
+                $( "#opis_tima" ).load( "/Projekt/text/sauber.txt" );
                 break;
          }
          $('html, body').animate({

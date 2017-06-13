@@ -77,3 +77,9 @@
             font-size: 12pt;
             width: 120pt;
         }
+
+        #author{
+            font-family: Courier New, Courier, monospace;
+            font-size: 8pt;
+            
+        }
