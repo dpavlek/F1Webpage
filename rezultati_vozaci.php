@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/personalstyle.css">
 
     <style>
  
@@ -73,6 +74,7 @@
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand page-link" href="#top" id="welcome_message">F1</a>
+                <a class="navbar-brand page-link" id="reset" onclick="resetGraph()">Reset</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -219,7 +221,7 @@ var data = d3.entries(drivers).map(function(d) {
  
 var svg = d3.select("#superformula").append("svg")
     .attr("width", 1280)
-    .attr("height", 480)
+    .attr("height", 520)
     .append("g")
     .attr("transform", "translate(70,70)");
 
@@ -280,6 +282,8 @@ var parcoords = d3.parcoords()("#example")
     });
 	
  var clicked = false;
+
+ var highlightedLinks=[];
  
 var path = svg
     .selectAll("path")
@@ -290,7 +294,16 @@ var path = svg
     .attr('y',function(d,i){return (140*Math.floor(i/8));})
     .attr('height', '100')
     .attr('width', '100')
-    .attr("xlink:href", function(d) { return "./helmets/" + d.key + ".png"; }) //image source F1Fanatic.co.uk
+    .attr("xlink:href", function(d) { 
+        if(d.key != "")
+        return "./helmets/" + d.key + ".png"; 
+    }) //image source F1Fanatic.co.uk
+    .on("click",function(d,i){
+      highlightedLinks.push(data[i]);
+		  parcoords.highlight(highlightedLinks);
+      removeTeams();
+		  clicked = true;
+	})
     .on("mouseover", function(d,i) {
 	if(clicked==false){
       parcoords.highlight([data[i]]);
@@ -299,8 +312,10 @@ var path = svg
 	}
     })
     .on("mouseout", function(d,i){
+      if(clicked==false){
       parcoords.unhighlight([data[i]]);
-	  removeTeams();
+	    removeTeams();
+      }
     });
 
   var DriverNames = svg
@@ -312,14 +327,24 @@ var path = svg
       .attr('y',function(d,i){return (140*Math.floor(i/8)+120);})
       .attr('text-anchor','middle')
       .text(function(d){return d["First"] + " " + d["Last"];})
+      .on("click",function(d,i){
+        highlightedLinks.push(data[i]);
+        parcoords.highlight(highlightedLinks);
+        removeTeams();
+        clicked = true;
+	    })
       .on("mouseover", function(d,i) {
-      parcoords.highlight([data[i]]);
-	  for(var i=0; i<11; i++)
-  		addTeams(d.key,i);
+      if(clicked==false){
+        parcoords.highlight([data[i]]);
+	      for(var i=0; i<11; i++)
+  		    addTeams(d.key,i);
+      }
     })
     .on("mouseout", function(d,i){
-      parcoords.unhighlight([data[i]]);
-	  removeTeams();
+      if(clicked==false){
+        parcoords.unhighlight([data[i]]);
+	      removeTeams();
+      }
     });
 
     window.onresize = function() {
@@ -343,7 +368,7 @@ var path = svg
 			.attr("class","teamInfo")
 			.attr("x", function(d){
                 if($(window).width()<1280){
-                    return ($("#example").width()/12)*p;
+                    return ($("#example").width()/15)*p;
                 }
                 else 
                     return 107*p;
@@ -353,7 +378,7 @@ var path = svg
 			.attr("fill",function(d){return d[name].color[p];})
 			.attr("width",function(d){
                 if($(window).width()<1280){
-                    return $("#example").width()/13;
+                    return $("#example").width()/20;
                 }
                 else{
                     return 100;
@@ -361,20 +386,33 @@ var path = svg
             })
 			.attr("height",470);
 
-		var teamNames = parcoords.svg.selectAll("text[id='tooltip']")
+		var teamNames = svg.selectAll("text[id='tooltip']")
 						.data(teams)
 						.enter()
 						.append("text")
 						.attr("class","teamInfo")
 						.text(function(d){return d[name].team[p];})
-						.attr("x", 50+107*p)
-						.attr("y", -15)
+						.attr("x", function(d){
+                        if($(window).width()<1280){
+                            return ($("#example").width()/15)*p;
+                        }
+                        else 
+                            return 107*p;
+                        })
+						.attr("y", 450)
 						.attr("text-anchor", "middle");
 	}
 
 	function removeTeams(){
 		parcoords.svg.selectAll(".teamInfo").remove();
+    svg.selectAll(".teamInfo").remove();
 	}
+
+    function resetGraph(){
+      parcoords.unhighlight(highlightedLinks);
+      highlightedLinks=[];
+      clicked=false;
+  }
 
       </script>
   </body>
